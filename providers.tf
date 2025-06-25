@@ -1,4 +1,3 @@
-
 terraform {
   required_version = ">=1.0"
 
@@ -6,10 +5,15 @@ terraform {
     aws = {
       source = "hashicorp/aws"
     }
+    kubernetes = {
+      source = "hashicorp/kubernetes"
+    }
+    tls = {
+      source = "hashicorp/tls"
+    }
   }
 }
 
 provider "aws" {
-  region  = local.region
-  profile = local.aws_profile
+  region = var.region
 }

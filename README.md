@@ -35,7 +35,8 @@ The Terraform configuration includes the following AWS resources:
 - **IAM Roles**:
   - EKS Cluster Role
   - EKS Node Group Role
-  - Bastion Host Role
+  - OIDC
+  - ALB Controller
 - **Key Pair** for SSH access via Jump Server.
 
 ### 🔐 Bastion Host (Jump Server)
@@ -50,7 +51,7 @@ The Terraform configuration includes the following AWS resources:
 | Feature                          | Benefit                                                                 |
 |----------------------------------|-------------------------------------------------------------------------|
 | 🔄 **Automated Provisioning**    | Reduces human error and ensures consistency across environments.        |
-| 🛡️ **Secure Access via Bastion** | Prevents direct internet exposure of private resources.                 |
+                |
 | 🌍 **High Availability**         | Multi-AZ deployment ensures fault tolerance and uptime.                 |
 | ☁️ **Fully Managed Kubernetes**  | Leverages AWS EKS to offload control plane operations.                 |
 | 📦 **Modular Structure**         | Easy to extend and maintain over time.                                 |
@@ -79,13 +80,7 @@ Now you can interact with the EKS cluster:
 kubectl get nodes
 ```
 
-## 🚀 Getting Started
 
-    Clone this repository:
-    ``` 
-    git clone https://github.com/fred4impact/eks-cluster-terraform.git
-cd eks-cluster-terraform
-    ```
 
  ## Customize terraform.tfvars:
 
@@ -99,13 +94,7 @@ terraform plan
 terraform apply
 ``` 
 
-##  Pre-Requisites
-   - Terraform v1.0+
-   - AWS CLI configured (aws configure)
-   - AWS IAM credentials with admin permissions
-   -  SSH Key Pair created and referenced in the config
 
-   📄 License
 
 ### This project is open-source and available under the MIT License.
 🙋‍♂️ Support & Contribution
