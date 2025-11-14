@@ -33,7 +33,7 @@ jobs:
   terraform:
     name: Terraform ${{ github.event.inputs.action }}
     runs-on: ubuntu-latest
-    environment: production
+    environment: ${{ github.event.inputs.env }}
 
     defaults:
       run:
