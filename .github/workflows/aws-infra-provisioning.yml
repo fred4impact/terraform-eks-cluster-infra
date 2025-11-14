@@ -1,4 +1,4 @@
-name: AWS EKS Cluster Infrastructure Provisioning
+name: Infra Provisining for AWS EKS Cluster
 
 on:
   workflow_dispatch:
