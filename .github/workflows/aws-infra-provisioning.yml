@@ -11,7 +11,7 @@ on:
         description: "The environment to deploy to"
         required: true
         default: "development"
-      actions:
+      action:
         description: "Terraform actions to perform (plan, apply, destroy)"
         type: choice
         options:
