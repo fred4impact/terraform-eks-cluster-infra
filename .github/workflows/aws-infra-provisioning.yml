@@ -19,7 +19,7 @@ on:
           - apply
           - destroy
         required: true
-        default: "apply"
+        default: "plan"
 
 env:
   AWS_REGION: us-east-1
